@@ -21,5 +21,10 @@ class Program
         {
             Console.WriteLine($"{cow.Name} {cow.Colour}  {cow.Age}");
         }
+
+        cows.Sort((new CompareByColor()));
+        Console.WriteLine($"Nach Farbe sortiert ");
+        foreach (Cow cow in cows)
+            Console.WriteLine($"{cow.Name} {cow.Colour}  {cow.Age}");
     }
 }
