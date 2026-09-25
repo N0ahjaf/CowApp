@@ -15,16 +15,23 @@ class Program
             new Cow("Milka", "lila", 5),
 
         };
-        cows.Sort();
+        
         Console.WriteLine($"Nach Name sortiert");
+        cows.Sort();
         foreach (Cow cow in cows)
-        {
             Console.WriteLine($"{cow.Name} {cow.Colour}  {cow.Age}");
-        }
 
-        cows.Sort((new CompareByColor()));
         Console.WriteLine($"Nach Farbe sortiert ");
+        cows.Sort((new CompareByColor()));
         foreach (Cow cow in cows)
             Console.WriteLine($"{cow.Name} {cow.Colour}  {cow.Age}");
+
+
+
+        Console.WriteLine($"Nach alter absteigend sortiert:");
+        cows.Sort((new ComparebyAge()));
+        foreach (Cow cow in cows)
+            Console.WriteLine($"{cow.Name} {cow.Colour}  {cow.Age}");
+        
     }
 }
