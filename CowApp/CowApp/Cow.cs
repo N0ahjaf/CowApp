@@ -1,10 +1,19 @@
-﻿namespace CowApp;
+﻿using System.ComponentModel;
+
+namespace CowApp;
 
 public class Cow:IEquatable<Cow>,IComparable<Cow>
 {
     public string Name { get; set; }
     public string Colour { get;  set; }
     public int Age { get; set; }
+
+    public Cow(string name, string colour, int age)
+    {
+        Name = name;
+        Colour = colour;
+        Age = age;
+    }
 
     public bool Equals(Cow? other)
     {
@@ -35,5 +44,16 @@ public class Cow:IEquatable<Cow>,IComparable<Cow>
         var colourComparison = string.Compare(Colour, other.Colour, StringComparison.Ordinal);
         if (colourComparison != 0) return colourComparison;
         return Name.CompareTo(other.Name);
+    }
+}
+
+public class CompareByColor : IComparer<Cow>
+{
+    public int Compare(Cow? x, Cow? y)
+    {
+        if (ReferenceEquals(x, y)) return 0;
+        if (x is null) return -1;
+        if (y is null) return 1;
+        return x.Colour.CompareTo(y.Colour);
     }
 }
