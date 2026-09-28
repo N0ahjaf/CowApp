@@ -1,7 +1,4 @@
 ﻿namespace CowApp;
-
-public class CompareByAge
-{
     public class ComparebyAge : IComparer<Cow>
     {
         public int Compare(Cow? x, Cow? y)
@@ -12,4 +9,3 @@ public class CompareByAge
             return  y.Age.CompareTo(x.Age);
         }
     }
-}
