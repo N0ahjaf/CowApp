@@ -1,18 +1,22 @@
 ﻿using System.ComponentModel;
+using System.Dynamic;
 
 namespace CowApp;
 
-public class Cow:IEquatable<Cow>,IComparable<Cow>
+public class Cow : IEquatable<Cow>, IComparable<Cow>
 {
+
+    public DateTime Geburt { get; private set; }
     public string Name { get; set; }
     public string Colour { get;  set; }
     public int Age { get; set; }
 
-    public Cow(string name, string colour, int age)
+    public Cow(string name, string colour, int age,DateTime geburt)
     {
         Name = name;
         Colour = colour;
         Age = age;
+        Geburt = geburt;
     }
 
     public bool Equals(Cow? other)
