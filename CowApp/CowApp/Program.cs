@@ -38,5 +38,14 @@ class Program
         cows.Sort((new CompareBySecondLetter()));
         foreach (Cow cow in cows)
             Console.WriteLine($"{cow.Name} {cow.Colour}  {cow.Age}");
+        
+        
+        // zweite eigene Implementierung 
+        Console.WriteLine($"Nach Geburtsdatum steigend sortiert:");
+        cows.Sort((new CompareByBirthday()));
+        foreach (Cow  cow in  cows)
+        {
+            Console.WriteLine($"{cow.Name} {cow.Colour}  {cow.Age} {cow.Geburt}");
+        }
     }
 }
