@@ -52,32 +52,32 @@ class Program
                 }
             }
 
-            Console.WriteLine($"Nach Name sortiert");
+            Console.WriteLine($"\nNach Name sortiert");
             cows.Sort();
             foreach (Cow cow in cows)
                 Console.WriteLine($"{cow.Name} {cow.Colour}  {cow.Age}");
 
-            Console.WriteLine($"Nach Farbe sortiert ");
+            Console.WriteLine($"\nNach Farbe sortiert ");
             cows.Sort((new CompareByColor()));
             foreach (Cow cow in cows)
                 Console.WriteLine($"{cow.Name} {cow.Colour}  {cow.Age}");
 
 
 
-            Console.WriteLine($"Nach alter absteigend sortiert:");
+            Console.WriteLine($"\nNach alter absteigend sortiert:");
             cows.Sort((new ComparebyAge()));
             foreach (Cow cow in cows)
                 Console.WriteLine($"{cow.Name} {cow.Colour}  {cow.Age}");
 
             // erste eigene Implementierung 
-            Console.WriteLine($"Nach 2ten Buchstaben sortiert:"); 
+            Console.WriteLine($"\nNach 2ten Buchstaben sortiert:"); 
             cows.Sort((new CompareBySecondLetter()));
             foreach (Cow cow in cows)
                 Console.WriteLine($"{cow.Name} {cow.Colour}  {cow.Age}");
         
         
             // zweite eigene Implementierung 
-            Console.WriteLine($"Nach Geburtsdatum steigend sortiert:");
+            Console.WriteLine($"\nNach Geburtsdatum steigend sortiert:");
             cows.Sort((new CompareByBirthday()));
             foreach (Cow  cow in  cows)
             {
