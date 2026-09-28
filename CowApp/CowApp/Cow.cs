@@ -50,8 +50,3 @@ public class Cow : IEquatable<Cow>, IComparable<Cow>
         return Name.CompareTo(other.Name);
     }
 }
-
-
-
-//Eigene Vergleiche 
-
