@@ -1,0 +1,11 @@
+﻿"Milka";"lila";5;17-10-2009
+"Paula";"blau";2;10-02-2000
+
+"Max";"rot";4;15-08-2008
+"Milo";"weiß";3;12-03-2016
+"pablo";"2";222;
+ianis dorito;ss;2.2.-2;
+
+"Nala";"orange";6;28-09-2010
+"Kira";"rosa";2;06-06-2021
+"pablo";"77";2;
