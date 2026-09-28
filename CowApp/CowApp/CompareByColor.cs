@@ -1,6 +1,7 @@
-﻿namespace CowApp;
+﻿using System.ComponentModel;
+namespace CowApp;
 
-public class CompareByColor
+public class CompareByColor:IComparer<Cow>
 {
     public int Compare(Cow? x, Cow? y)
     {
