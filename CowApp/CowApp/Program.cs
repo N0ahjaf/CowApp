@@ -3,16 +3,16 @@
 class Program
 {
     static void Main(string[] args)
-    {
+    {   
         List<Cow> cows = new List<Cow>
         {
-            new Cow("Milka", "lila", 4),
-            new Cow("Paula", "weiss", 6),
-            new Cow("Conny", "schwarz", 4),
-            new Cow("Berta", "weiss", 7),
-            new Cow("Mathias", "rosa", 4),
-            new Cow("Milka", "rosa", 4),
-            new Cow("Milka", "lila", 5),
+            new Cow("Milka", "lila", 4,new DateTime(2009,10,17)),
+            new Cow("Paula", "weiss", 6,new DateTime(2000,4,12)),
+            new Cow("Conny", "schwarz", 4,new DateTime(1999,12,5)),
+            new Cow("Berta", "weiss", 7,new DateTime(2009,10,7)),
+            new Cow("Mathias", "rosa", 4,new DateTime(2020,12,2)),
+            new Cow("Milka", "rosa", 4,new DateTime(2024,5,22)),
+            new Cow("Milka", "lila", 5,new DateTime(2001,1,8)),
 
         };
         
